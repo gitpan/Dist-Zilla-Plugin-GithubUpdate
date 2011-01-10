@@ -41,7 +41,7 @@
          "web" : "https://github.com/AlexBio/Dist-Zilla-Plugin-GithubUpdate"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

@@ -1,3 +1,19 @@
+==============================
+9999-99-99 99:99:99 +0000 HEAD
+==============================
+
+  commit f838b9ff16bf4714616882c60dafe68be89da09c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Jan 10 10:41:27 2011 +0100
+  
+    bump version
+
+  commit 67890691340e56f8984c826a15fa36484017e88e
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Jan 10 10:23:46 2011 +0100
+  
+    remove test pod-coverage 
+
 ===================================
 End of changes in the last 365 days
 ===================================
