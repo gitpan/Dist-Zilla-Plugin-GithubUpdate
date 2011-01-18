@@ -2,6 +2,28 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 8fa2db928f5bf0cb4ce5687b233fcb576a4fac7e
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Tue Jan 18 20:40:43 2011 +0100
+  
+    bump version
+
+  commit 140b76bd419164200a6b31302c6af18c2ec5b283
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Tue Jan 18 20:40:13 2011 +0100
+  
+    smarter 'p3rl' option
+
+  commit 08a17223e4d764f2f0ca36bb1d564fb7a012a020
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Tue Jan 18 20:27:04 2011 +0100
+  
+    add 'p3rl' option 
+
+===============================
+2011-01-10 10:41:27 +0100 v0.02
+===============================
+
   commit f838b9ff16bf4714616882c60dafe68be89da09c
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Mon Jan 10 10:41:27 2011 +0100

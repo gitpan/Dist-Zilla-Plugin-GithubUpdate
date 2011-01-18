@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::GithubUpdate;
 BEGIN {
-  $Dist::Zilla::Plugin::GithubUpdate::VERSION = '0.02';
+  $Dist::Zilla::Plugin::GithubUpdate::VERSION = '0.03';
 }
 
 use Moose;
@@ -27,13 +27,19 @@ has cpan => (
 	default => 1
 );
 
+has p3rl => (
+	is   	=> 'ro',
+	isa  	=> 'Bool',
+	default => 0
+);
+
 =head1 NAME
 
 Dist::Zilla::Plugin::GithubUpdate - Update GitHub repo info on release
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -55,7 +61,7 @@ sub release {
 	my $self 	= shift;
 	my ($opts) 	= @_;
 	my $base_url	= 'https://github.com/api/v2/json';
-	my $repo_name 	= $self -> zilla -> name;
+	my $repo_name	= $self -> zilla -> name;
 	my ($login, $token);
 
 	if ($self -> login) {
@@ -87,7 +93,11 @@ sub release {
 		'values[description]'	=> $self -> zilla -> abstract,
 	);
 
-	if ($self -> cpan == 1) {
+	if ($self -> p3rl == 1) {
+		my $guess_name = $repo_name;
+		$guess_name =~ s/\-/\:\:/g;
+		$params{'values[homepage]'} = "http://p3rl.org/$guess_name";
+	} elsif ($self -> cpan == 1) {
 		$params{'values[homepage]'} = "http://search.cpan.org/dist/$repo_name/";
 	}
 
@@ -123,6 +133,13 @@ value of C<github.token> from the Git configuration, to set it, type:
 
 If set to '1' (default), the GitHub homepage field will be set to the
 CPAN page of the module.
+
+=item C<p3rl>
+
+If set to '1' (default '0'), the GitHub homepage field will be set to the
+p3rl.org shortened URL (e.g. C<http://p3rl.org/My::Module>).
+This takes precedence over the C<cpan> option (if both '1', p3rl will
+be used).
 
 =back
 

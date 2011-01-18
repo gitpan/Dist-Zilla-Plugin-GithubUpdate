@@ -20,7 +20,7 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-GithubUpdate/
   repository: git://github.com/AlexBio/Dist-Zilla-Plugin-GithubUpdate.git
-version: 0.02
+version: 0.03
 x_Dist_Zilla:
   plugins:
     -
@@ -118,7 +118,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::GithubUpdate
       name: GithubUpdate
-      version: 0.01
+      version: 0.03
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
